@@ -1,0 +1,14 @@
+C:\Users\alaae\Desktop\C#\E-commerce\bin\Debug\net8.0\..exe
+C:\Users\alaae\Desktop\C#\E-commerce\bin\Debug\net8.0\..deps.json
+C:\Users\alaae\Desktop\C#\E-commerce\bin\Debug\net8.0\..runtimeconfig.json
+C:\Users\alaae\Desktop\C#\E-commerce\bin\Debug\net8.0\..dll
+C:\Users\alaae\Desktop\C#\E-commerce\bin\Debug\net8.0\..pdb
+C:\Users\alaae\Desktop\C#\E-commerce\obj\Debug\net8.0\..GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alaae\Desktop\C#\E-commerce\obj\Debug\net8.0\..AssemblyInfoInputs.cache
+C:\Users\alaae\Desktop\C#\E-commerce\obj\Debug\net8.0\..AssemblyInfo.cs
+C:\Users\alaae\Desktop\C#\E-commerce\obj\Debug\net8.0\..csproj.CoreCompileInputs.cache
+C:\Users\alaae\Desktop\C#\E-commerce\obj\Debug\net8.0\..dll
+C:\Users\alaae\Desktop\C#\E-commerce\obj\Debug\net8.0\refint\..dll
+C:\Users\alaae\Desktop\C#\E-commerce\obj\Debug\net8.0\..pdb
+C:\Users\alaae\Desktop\C#\E-commerce\obj\Debug\net8.0\..genruntimeconfig.cache
+C:\Users\alaae\Desktop\C#\E-commerce\obj\Debug\net8.0\ref\..dll

@@ -10,6 +10,11 @@ public class InMemoryCustomerRepository : ICustomerRepository
         return Task.FromResult(customer);
     }
 
+    public Task<IEnumerable<Customer>> GetAllCustomersAsync()
+    {
+        return Task.FromResult<IEnumerable<Customer>>(_customers.Values.ToList());
+    }
+
     public Task AddCustomerAsync(Customer customer)
     {
         _customers[customer.Id] = customer;
@@ -31,6 +36,11 @@ public class InMemoryProductRepository : IProductRepository
     {
         _products.TryGetValue(id, out var product);
         return Task.FromResult(product);
+    }
+
+    public Task<IEnumerable<Product>> GetAllProductsAsync()
+    {
+        return Task.FromResult<IEnumerable<Product>>(_products.Values.ToList());
     }
 
     public Task AddProductAsync(Product product)
@@ -56,6 +66,17 @@ public class InMemoryOrderRepository : IOrderRepository
         return Task.FromResult(order);
     }
 
+    public Task<IEnumerable<Order>> GetAllOrdersAsync()
+    {
+        return Task.FromResult<IEnumerable<Order>>(_orders.Values.ToList());
+    }
+
+    public Task<IEnumerable<Order>> GetOrdersByCustomerIdAsync(Guid customerId)
+    {
+        var orders = _orders.Values.Where(o => o.CustomerId == customerId).ToList();
+        return Task.FromResult<IEnumerable<Order>>(orders);
+    }
+
     public Task AddOrderAsync(Order order)
     {
         _orders[order.Id] = order;
@@ -77,6 +98,11 @@ public class InMemoryPaymentRepository : IPaymentRepository
     {
         _payments.TryGetValue(id, out var payment);
         return Task.FromResult(payment);
+    }
+
+    public Task<IEnumerable<Payment>> GetAllPaymentsAsync()
+    {
+        return Task.FromResult<IEnumerable<Payment>>(_payments.Values.ToList());
     }
 
     public Task AddPaymentAsync(Payment payment)

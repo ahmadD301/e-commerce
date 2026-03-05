@@ -2,8 +2,8 @@
 
 public class Cart
 {
-    private readonly List<CardItem> _items = new List<CardItem>();
-    public IReadOnlyCollection<CardItem> Items => _items.AsReadOnly();
+    private readonly List<CartItem> _items = new List<CartItem>();
+    public IReadOnlyCollection<CartItem> Items => _items.AsReadOnly();
     public bool IsEmpty => !_items.Any();
     
     public void AddItem(Product product, Quantity quantity)
@@ -11,7 +11,7 @@ public class Cart
         if (!product.IsActive)
             throw new ArgumentNullException(nameof(product), "Cannot add inactive product to cart.");
 
-        var item = new CardItem(product.Id, product.Name, product.Price, quantity); 
+        var item = new CartItem(product.Id, product.Name, product.Price, quantity); 
         var existingItem = _items.FirstOrDefault(i => i.ProductId == item.ProductId);
         if (existingItem != null)
         {

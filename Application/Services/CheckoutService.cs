@@ -23,6 +23,10 @@ public class CheckoutService
     public async Task<OrderId> CheckoutAsync(CustomerId customerId)
     {
         var customer = await _customerRepository.GetCustomerByIdAsync(customerId);
+        if (customer == null)
+        {
+            throw new InvalidOperationException("Customer not found.");
+        }
         if (!customer.IsActive)
         {
             throw new InvalidOperationException("Customer account is inactive.");

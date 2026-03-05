@@ -19,8 +19,8 @@ public class Payment
 
     public static Payment Create(Order order)
     {
-        if(order.Status != OrderStatus.Paid)
-            throw new InvalidOperationException("Payment can only be created for paid orders.");
+        if(order.Status != OrderStatus.Pending)
+            throw new InvalidOperationException("Payment can only be created for pending orders.");
         
         return new Payment(new PaymentId(Guid.NewGuid()), order.Id, order.TotalAmount);
     }
