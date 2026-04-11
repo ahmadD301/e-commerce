@@ -1,0 +1,46 @@
+# Visual Studio & editors
+.vs/
+.vscode/
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+bin copy/
+publish/
+
+# NuGet
+*.nupkg
+packages/
+project.assets.json
+*.snupkg
+
+# Rider / ReSharper
+_ReSharper*/
+
+# Test results / coverage
+TestResults/
+*.trx
+coverage*.xml
+
+# Logs, temp files
+*.log
+*.tmp
+*.temp
+*.cache
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+ehthumbs.db
+
+# OneDrive temp files
+~$*
