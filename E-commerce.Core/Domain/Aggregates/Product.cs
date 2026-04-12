@@ -45,6 +45,8 @@ public class Product
 
     public void IncreaseStock(int quantity)
     {
+        if (!IsActive)
+            throw new InvalidOperationException("Cannot increase stock of inactive product.");
         if (quantity <= 0)
             throw new ArgumentException("Quantity must be greater than zero.", nameof(quantity));
 
