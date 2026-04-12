@@ -86,17 +86,4 @@ Optional: generate coverage with Coverlet (MSBuild integration). From solution r
 dotnet test E-commerce.Test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 ```
 
-## Contributing
 
-- Run the test suite before submitting changes.
-- Follow the existing project structure and naming conventions.
-
-If you'd like help extending the project (new features, CI, or expanding tests), open an issue or create a PR.
-
-## License
-
-This repository is intended for learning. Add a license file if you plan to publish or share the code.
-
-## Contact
-
-For questions about the code, tests, or architecture, open an issue or message the repository maintainer.
