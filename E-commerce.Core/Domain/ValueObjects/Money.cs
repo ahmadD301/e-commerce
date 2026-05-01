@@ -1,5 +1,5 @@
 
-public readonly record struct Money
+public sealed record Money
 {
     public decimal Amount { get;}
     public string Currency { get; }

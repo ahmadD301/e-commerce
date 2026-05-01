@@ -5,6 +5,12 @@ public class Customer
     public string Email { get; private set; }
     public Cart Cart { get;  }
     public bool IsActive { get; private set; }
+    private Customer()
+    {
+        Name = string.Empty;
+        Email = string.Empty;
+        Cart = null!;
+    }
     public Customer(CustomerId id, string name, string email)
     {
         Id = id;

@@ -8,6 +8,11 @@ public class OrderItem
     public Quantity Quantity { get; }
     public Money TotalPrice => Price.Multiply(Quantity.Value);
 
+    private OrderItem()
+    {
+        ProductName = string.Empty;
+        Price = null!;
+    }
     public OrderItem(ProductId productId, string productName, Money price, Quantity quantity)
     {
         ProductId = productId;

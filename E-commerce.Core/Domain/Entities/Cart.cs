@@ -5,6 +5,8 @@ public class Cart
     private readonly List<CartItem> _items = new List<CartItem>();
     public IReadOnlyCollection<CartItem> Items => _items.AsReadOnly();
     public bool IsEmpty => !_items.Any();
+
+    internal Cart() { }
     
     public void AddItem(Product product, Quantity quantity)
     {

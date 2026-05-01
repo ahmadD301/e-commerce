@@ -8,6 +8,10 @@ public class Payment
     public PaymentStatus Status { get; private set; }
     public DateTime CreatedAt { get; }     
 
+    private Payment()
+    {
+        Amount = null!;
+    }
     public Payment(PaymentId id, OrderId orderId, Money amount)
     {
         Id = id;

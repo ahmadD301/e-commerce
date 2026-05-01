@@ -8,6 +8,11 @@ public class CartItem
     public Money UnitPrice { get; }
     public Quantity Quantity { get; private set; }
     public Money TotalPrice => UnitPrice.Multiply(Quantity);
+    private CartItem()
+    {
+        ProductName = string.Empty;
+        UnitPrice = null!;
+    }
     public CartItem(ProductId productId, string productName, Money unitPrice, Quantity quantity)
     {
         ProductId = productId;

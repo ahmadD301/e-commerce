@@ -11,6 +11,7 @@ public class Order
     public OrderStatus Status { get; private set; }
     public Money TotalAmount => CalculateTotalAmount();
 
+    private Order() { }
     public Order(OrderId id, Guid customerId , IEnumerable<OrderItem> items) 
     {
 

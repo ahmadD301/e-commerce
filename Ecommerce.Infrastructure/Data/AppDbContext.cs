@@ -69,8 +69,6 @@ public class AppDbContext : DbContext
 		customer.OwnsOne(typeof(Cart), "Cart", cart =>
 		{
 			cart.ToTable("Carts");
-			cart.Property("CustomerId")
-				.HasConversion(customerIdConverter);
 			cart.HasKey("CustomerId");
 			cart.WithOwner().HasForeignKey("CustomerId");
 			cart.Ignore("IsEmpty");
@@ -80,9 +78,7 @@ public class AppDbContext : DbContext
 				item.ToTable("CartItems");
 				item.Property<int>("Id").ValueGeneratedOnAdd();
 				item.HasKey("Id");
-				item.Property("CustomerId")
-					.HasConversion(customerIdConverter);
-				item.WithOwner().HasForeignKey("CustomerId");
+				item.WithOwner();
 				item.Property("ProductId")
 					.HasConversion(productIdConverter)
 					.IsRequired();
