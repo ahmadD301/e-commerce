@@ -79,6 +79,20 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        await dbContext.Database.MigrateAsync();
+
+        // Seed only when empty to avoid duplicates on every restart.
+        if (!await dbContext.Customers.AnyAsync())
+        {
+            var customerRepository = scope.ServiceProvider.GetRequiredService<ICustomerRepository>();
+            var productRepository = scope.ServiceProvider.GetRequiredService<IProductRepository>();
+            await DataSeeder.SeedDataAsync(customerRepository, productRepository);
+        }
+    }
+
     app.UseSwagger();
     app.UseSwaggerUI();
 }

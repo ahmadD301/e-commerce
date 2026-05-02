@@ -50,6 +50,7 @@ public class AppDbContext : DbContext
 		{
 			money.Property("Amount")
 				.HasColumnName("PriceAmount")
+				.HasPrecision(18, 2)
 				.IsRequired();
 			money.Property("Currency")
 				.HasColumnName("PriceCurrency")
@@ -90,6 +91,7 @@ public class AppDbContext : DbContext
 				{
 					money.Property("Amount")
 						.HasColumnName("UnitPriceAmount")
+						.HasPrecision(18, 2)
 						.IsRequired();
 					money.Property("Currency")
 						.HasColumnName("UnitPriceCurrency")
@@ -130,6 +132,7 @@ public class AppDbContext : DbContext
 			{
 				money.Property("Amount")
 					.HasColumnName("PriceAmount")
+					.HasPrecision(18, 2)
 					.IsRequired();
 				money.Property("Currency")
 					.HasColumnName("PriceCurrency")
@@ -157,6 +160,7 @@ public class AppDbContext : DbContext
 		{
 			money.Property("Amount")
 				.HasColumnName("Amount")
+				.HasPrecision(18, 2)
 				.IsRequired();
 			money.Property("Currency")
 				.HasColumnName("Currency")
