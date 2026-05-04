@@ -88,7 +88,7 @@ dotnet --version
 ### Clone
 
 ```powershell
-git clone <YOUR_REPO_URL>
+git clone https://github.com/ahmadD301/e-commerce.git
 cd e-commerce
 ```
 
